@@ -1,22 +1,26 @@
 package pl.kostrzewa.vaadin.grid;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data
+import java.time.LocalDate;
+
+
 public class User {
 
     int id;
     String login;
     String password;
     String email;
+    LocalDate date;
 
 
-
-    public User(int id, String login, String password, String email) {
+    public User(int id, String login, String password, String email, LocalDate date) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.email = email;
+        this.date = date;
     }
 
     public int getId() {
@@ -51,5 +55,11 @@ public class User {
         this.email = email;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
 
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 }

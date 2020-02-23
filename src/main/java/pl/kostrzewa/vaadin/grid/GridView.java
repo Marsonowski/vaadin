@@ -23,7 +23,8 @@ public class GridView extends GridLayout implements View {
         grid.setSizeFull();
         grid.setItems(userList);
         grid.addColumn(User::getLogin).setCaption("Login");
-        grid.addColumn(User::getEmail);
+        grid.addColumn(User::getPassword).setCaption("Passowrd");
+        grid.addColumn(User::getEmail).setCaption("Email");
         addComponent(grid);
     }
 
