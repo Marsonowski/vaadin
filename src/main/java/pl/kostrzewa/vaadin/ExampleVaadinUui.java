@@ -28,7 +28,11 @@ public class ExampleVaadinUui extends VerticalLayout implements View {
                 getUI().getNavigator().navigateTo("grid");
         });
 
-        addComponents(button2, button3);
+        Button button4 = new Button("Show form ", event -> {
+            getUI().getNavigator().navigateTo("form");
+        });
+
+        addComponents(button2, button3, button4);
 
 
     }
@@ -39,6 +43,8 @@ public class ExampleVaadinUui extends VerticalLayout implements View {
         String result = restTemplate.getForObject("http://localhost:8080/rest", String.class);
         Notification.show(result);
     }
+
+
 
 
 }

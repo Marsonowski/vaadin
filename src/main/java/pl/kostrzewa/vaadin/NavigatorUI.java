@@ -7,6 +7,7 @@ import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.UI;
 
 import lombok.Getter;
+import pl.kostrzewa.vaadin.grid.FormView;
 import pl.kostrzewa.vaadin.grid.GridView;
 
 
@@ -22,5 +23,6 @@ public class NavigatorUI  extends UI {
         setNavigator(navigator);
         navigator.addView("", (View) new ExampleVaadinUui());
         navigator.addView("grid", new GridView());
+        navigator.addView("form", new FormView());
     }
 }
